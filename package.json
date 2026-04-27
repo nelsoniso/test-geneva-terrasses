@@ -1,0 +1,22 @@
+{
+  "name": "geneve-ombres-sitg",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:host": "vite --host",
+    "dev:arcgis": "vite --open /index.html",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@arcgis/core": "^4.31.6",
+    "@turf/turf": "^7.3.5",
+    "maplibre-gl": "^3.6.2",
+    "proj4": "^2.11.0",
+    "suncalc": "^1.9.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

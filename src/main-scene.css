@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+#viewDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#ui {
+  position: absolute;
+  z-index: 2;
+  left: 12px;
+  top: 12px;
+  max-width: min(420px, 92vw);
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  line-height: 1.4;
+  pointer-events: auto;
+}
+#ui h1 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+#ui p {
+  margin: 0;
+  color: #333;
+}
+#ui a {
+  color: #0079c1;
+}
+.view-toggle-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  margin: 8px 0 0 0;
+}
+.btn-3d {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #0079c1;
+  background: #0079c1;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-3d:hover {
+  filter: brightness(1.05);
+}
+.view-mode-label {
+  font-size: 12px;
+  color: #666;
+}
+.sun-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px 14px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+.sun-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #444;
+}
+.time-slider-label {
+  min-width: min(100%, 240px);
+  flex: 1 1 200px;
+}
+.time-slider-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#time-slider {
+  flex: 1;
+  min-width: 0;
+  accent-color: #0079c1;
+}
+#time-slider-out {
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  min-width: 3.2em;
+  font-weight: 500;
+  color: #333;
+}
+.sun-row input[type="date"] {
+  font: inherit;
+  min-width: 8em;
+}
+.sun-row .shadow-toggle {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+#ui code {
+  font-size: 12px;
+  background: #f0f0f0;
+  padding: 0 4px;
+  border-radius: 3px;
+}
+.poi-status {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: #555;
+  min-height: 1.2em;
+}
+.poi-status .poi-hint {
+  color: #777;
+}

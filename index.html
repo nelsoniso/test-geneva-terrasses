@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genève – plan / 3D (ArcGIS)</title>
+  </head>
+  <body>
+    <div id="ui">
+      <h1>Genève – même WebScene (plan par défaut, plus rapide)</h1>
+      <p>
+        Scène
+        <a
+          href="https://www.arcgis.com/home/item.html?id=9a34eb6038414a7984e91a8aef834b1a"
+          target="_blank"
+          rel="noopener"
+          >CARTE 3D DE GENEVE</a
+        >
+        · Sphère d’exemple = calque
+        <code>GraphicsLayer</code> ·
+        <strong>Mode plan</strong> = vue du dessus, qualité allégée (ombres actives).
+      </p>
+      <p class="view-toggle-row">
+        <button type="button" id="toggle-3d" class="btn-3d">Vue 3D (navigation oblique)</button>
+        <span id="view-mode-label" class="view-mode-label">Mode plan (vue du dessus)</span>
+      </p>
+      <div class="sun-row">
+        <label
+          >Date
+          <input type="date" id="date" />
+        </label>
+        <label class="time-slider-label"
+          >Heure du soleil
+          <div class="time-slider-line">
+            <input type="range" id="time-slider" min="0" max="1439" value="720" step="1" />
+            <output id="time-slider-out" for="time-slider">12:00</output>
+          </div>
+        </label>
+        <input type="hidden" id="time" value="12:00" />
+        <label class="shadow-toggle">
+          <input type="checkbox" id="shadows" checked />
+          Ombres des bâtiments
+        </label>
+        <label class="shadow-toggle">
+          <input type="checkbox" id="poi-enabled" checked />
+          Terrasses (SITG, Ville de Genève)
+        </label>
+        <button type="button" id="now">Maintenant</button>
+      </div>
+      <p id="poi-status" class="poi-status" aria-live="polite"></p>
+    </div>
+    <div id="viewDiv"></div>
+    <script type="module" src="/src/main-scene.ts"></script>
+  </body>
+</html>
