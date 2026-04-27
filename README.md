@@ -4,7 +4,15 @@ Application Vite avec `@arcgis/core` : WebScene Genève, soleil / ombres, terras
 
 **Dépôt :** https://github.com/nelsoniso/geneve-ombres-sitg  
 
-**Site publié (GitHub Pages), après activation du workflow :** https://nelsoniso.github.io/geneve-ombres-sitg/
+**Site publié (GitHub Pages), une fois le déploiement OK :** https://nelsoniso.github.io/geneve-ombres-sitg/
+
+### Si tu vois « 404 · There isn't a GitHub Pages site here »
+
+1. **Réglages du dépôt** → **Pages** → **Build and deployment** → **Source** doit être **GitHub Actions** (pas « Deploy from a branch »).
+2. **Réglages** → **Actions** → **General** → **Workflow permissions** → coche **Read and write permissions** puis **Save**.
+3. Onglet **Actions** : ouvre **Deploy to GitHub Pages**. Si une ligne est rouge, ouvre-la et lis l’erreur (souvent build npm ou première approbation de l’environnement « github-pages »).
+4. **Dépôt public** : avec un compte gratuit, Pages pour un dépôt **privé** peut être bloqué ou limité ; en cas de doute, passe le dépôt en **public** (**Settings → General → Danger zone → Change repository visibility**).
+5. Déclenche à nouveau un déploiement : bouton **Run workflow** sur le workflow (ou petit commit + `git push`), puis attends 1–3 minutes et réessaie l’URL.
 
 ## Développement local
 
