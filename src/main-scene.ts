@@ -24,6 +24,20 @@ import { load, project } from "@arcgis/core/geometry/projection";
 import "./main-scene.css";
 import "@arcgis/core/assets/esri/themes/light/main.css";
 
+/** Affiché sur GitHub Pages pour confirmer quel build est servi (see CI VITE_APP_SHA). */
+function showBuildStamp(): void {
+  const sha = import.meta.env.VITE_APP_SHA as string | undefined;
+  const el = document.getElementById("build-stamp");
+  if (!el) {
+    return;
+  }
+  el.textContent = sha?.trim()
+    ? `Build déployé : ${sha.trim().slice(0, 7)} — même app que ce dossier (ArcGIS + terrasses rouges SITG).`
+    : "Local (npm run dev) — ArcGIS + terrasses SITG.";
+}
+
+showBuildStamp();
+
 esriConfig.assetsPath = "https://js.arcgis.com/4.31/@arcgis/core/assets";
 
 /** Même scène 3D que le viewer : https://www.arcgis.com/home/webscene/viewer.html?webscene=9a34eb6038414a7984e91a8aef834b1a */
